@@ -6,22 +6,87 @@ import InputWrapper from './styled/InputWrapper';
 import Label from './styled/Label';
 import SubmitButton from './styled/SubmitButton';
 import Textarea from './styled/Textarea';
+import { useForm } from 'react-hook-form';
+import ErrorSpan from './styled/ErrorSpan';
 
+type Inputs = {
+  name: string;
+  email: string;
+  message: string;
+};
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+};
 const Contact = () => {
+  const { register, handleSubmit, errors } = useForm<Inputs>();
+  const [state, setState] = React.useState({});
+  const handleChange = (e: { target: { name: string; value: string } }) =>
+    setState({ ...state, [e.target.name]: e.target.value });
+
+  const onSubmit = (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': 'contact',
+        ...state,
+      }),
+    })
+      .then(() => {
+        window.location.href = '/dziekujemy';
+      })
+      .catch((error) => console.log(error));
+  };
   return (
     <ContactWrapper>
-      <Form>
+      <Form onSubmit={handleSubmit(onSubmit)}>
+        <input type="hidden" name="form-name" value="contact" />
         <InputWrapper>
-          <Label htmlFor="name">Imię</Label>
-          <Input type="text" name="name" id="name" />
+          <div>
+            <Label htmlFor="name">Imię</Label>
+            <ErrorSpan>{errors.name ? 'Jest za krótkie (min. 3 znaki)' : ''}</ErrorSpan>
+          </div>
+          <Input
+            type="text"
+            name="name"
+            id="name"
+            ref={register({ required: true, minLength: 3 })}
+            onChange={handleChange}
+          />
         </InputWrapper>
         <InputWrapper>
-          <Label htmlFor="email">Email</Label>
-          <Input type="email" name="email" id="email" />
+          <div>
+            <Label htmlFor="email">Email</Label>
+            <ErrorSpan>{errors.email ? errors.email.message : ''}</ErrorSpan>
+          </div>
+          <Input
+            type="email"
+            name="email"
+            id="email"
+            ref={register({
+              required: 'jest nieprawidłowy',
+              pattern: {
+                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                message: 'jest nieprawidłowy',
+              },
+            })}
+            onChange={handleChange}
+          />
         </InputWrapper>
         <InputWrapper>
-          <Label htmlFor="message">Wiadomość</Label>
-          <Textarea name="message" id="message" />
+          <div>
+            <Label htmlFor="message">Wiadomość</Label>
+            <ErrorSpan>{errors.message ? 'Jest za krótka (min. 10 znaków)' : ''}</ErrorSpan>
+          </div>
+          <Textarea
+            name="message"
+            id="message"
+            ref={register({ required: true, minLength: 10 })}
+            onChange={handleChange}
+          />
         </InputWrapper>
         <SubmitButton type="submit">Wyślij</SubmitButton>
       </Form>
