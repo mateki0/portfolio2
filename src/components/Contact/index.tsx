@@ -42,7 +42,7 @@ const Contact = () => {
   };
   return (
     <ContactWrapper>
-      <Form onSubmit={handleSubmit(onSubmit)}>
+      <Form onSubmit={handleSubmit(onSubmit)} method="POST" name="contact" data-netlify="true">
         <input type="hidden" name="form-name" value="contact" />
         <InputWrapper>
           <div>
@@ -88,7 +88,7 @@ const Contact = () => {
             onChange={handleChange}
           />
         </InputWrapper>
-        <SubmitButton type="submit">Wyślij</SubmitButton>
+        <SubmitButton>Wyślij</SubmitButton>
       </Form>
     </ContactWrapper>
   );

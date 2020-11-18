@@ -8,7 +8,7 @@ import SEO from '../components/seo';
 const Home = () => {
   return (
     <Layout>
-      <SEO title="Strona główna" />
+      <SEO title="Portfolio" />
       <About />
       <Projects />
       <Contact />
