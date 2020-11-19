@@ -2,6 +2,7 @@ import * as React from 'react';
 import SingleProject from '../SingleProject';
 import ProjectsWrapper from './styled/ProjectsWrapper';
 import { useStaticQuery, graphql } from 'gatsby';
+import SectionName from './styled/SectionName';
 
 const Projects = ({ forwardRef }) => {
   const allFile = useStaticQuery(graphql`
@@ -94,6 +95,7 @@ const Projects = ({ forwardRef }) => {
   }, []);
   return (
     <ProjectsWrapper ref={forwardRef}>
+      <SectionName>Projekty</SectionName>
       {allFile.allMarkdownRemark.edges.map((image, id) => (
         <SingleProject
           animate={show[`project${id}`]}

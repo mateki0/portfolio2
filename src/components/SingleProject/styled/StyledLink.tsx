@@ -19,12 +19,14 @@ const Glow = keyframes`
 `;
 const StyledLink = styled.a`
   color: #fff;
-  margin-top: 20px;
   font-size: 22px;
   align-self: center;
   animation: ${Glow} 3s infinite;
   &:hover {
     animation: ${Glow} 1s infinite;
+  }
+  @media only screen and (min-width: 1024px) {
+    margin-top: 20px;
   }
 `;
 export default StyledLink;

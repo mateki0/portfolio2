@@ -8,14 +8,6 @@ const ImgWrapper = styled.div`
   @media only screen and (min-width: 1024px) {
     width: 50vw;
   }
-  @media only screen and (min-width: 1280px) {
-    > * {
-      transition: all 1s;
-      &:hover {
-        transform: scale(1.1);
-      }
-    }
-  }
 `;
 
 export default ImgWrapper;

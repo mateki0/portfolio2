@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
   }
 body{
-  
+  background-color:rgb(28, 49, 69);
   box-sizing:border-box;
   display:flex;
   flex-direction:column;

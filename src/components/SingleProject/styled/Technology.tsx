@@ -15,7 +15,7 @@ const Technology = styled.li`
     transition: all 0.3s;
     &:hover {
       cursor: pointer;
-      fill: #000;
+      fill: rgb(24, 236, 141);
     }
   }
   @media only screen and (min-width: 1024px) {

@@ -29,7 +29,7 @@ const ChevronDown = styled.div<{ isVisible: boolean }>`
       width: 5px;
       height: 100%;
       position: absolute;
-      background-color: #fff;
+      background-color: rgb(24, 236, 141);
       transform: rotate(-45deg);
       left: 4px;
 
@@ -41,7 +41,7 @@ const ChevronDown = styled.div<{ isVisible: boolean }>`
       width: 5px;
       height: 100%;
       position: absolute;
-      background-color: #fff;
+      background-color: rgb(24, 236, 141);
       transform: rotate(45deg);
 
       animation: ${First} 1.5s linear infinite;

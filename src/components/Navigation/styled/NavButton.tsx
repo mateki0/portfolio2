@@ -12,7 +12,7 @@ const NavButton = styled.button`
 
   &:hover {
     cursor: pointer;
-    color: #fe4902;
+    color: rgb(24, 236, 141);
   }
   @media only screen and (max-width: 480px) {
     font-size: 14px;

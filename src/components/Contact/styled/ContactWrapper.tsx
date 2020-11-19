@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 
 const ContactWrapper = styled.section`
-  background: #444ef9;
-  padding: 40px 0;
-  margin-top: 50px;
+  background: rgb(19, 37, 57);
+  padding-bottom: 40px;
   display: grid;
   justify-items: center;
-  border-top: 2px solid #fe4902;
+  border-top: 2px solid rgb(24, 236, 141);
 `;
 export default ContactWrapper;

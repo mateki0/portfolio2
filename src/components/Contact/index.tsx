@@ -8,6 +8,7 @@ import SubmitButton from './styled/SubmitButton';
 import Textarea from './styled/Textarea';
 import { useForm } from 'react-hook-form';
 import ErrorSpan from './styled/ErrorSpan';
+import SectionName from '../Projects/styled/SectionName';
 
 type Inputs = {
   name: string;
@@ -42,6 +43,7 @@ const Contact = ({ forwardRef }) => {
   };
   return (
     <ContactWrapper ref={forwardRef}>
+      <SectionName>Kontakt</SectionName>
       <Form
         onSubmit={handleSubmit(onSubmit)}
         method="POST"

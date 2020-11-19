@@ -32,7 +32,7 @@ const Heading = styled.h1<{ isVisible: boolean }>`
   font-weight: 700;
   color: #fff;
   letter-spacing: 2px;
-  text-shadow: 1px 1px #fe4902, 2px 2px #fe4902, 3px 3px #fe4902, 4px 4px #fe4902;
+  text-shadow: 1px 1px #00b362, 2px 2px #00b362, 3px 3px #00b362, 4px 4px #00b362;
   transform: translate3d(0, 0, 0);
   position: absolute;
   width: 100%;

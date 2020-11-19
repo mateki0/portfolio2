@@ -8,8 +8,8 @@ const AboutWrapper = styled.section`
   position: relative;
   height: 100vh;
   min-height: 650px;
-  background: #444ef9;
-  border-bottom: 2px solid #fe4902;
+  background: #16224f;
+  border-bottom: 2px solid rgb(24, 236, 141);
 
   @media only screen and (min-width: 1024px) {
     height: 80vh;

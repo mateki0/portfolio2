@@ -8,10 +8,8 @@ const ProjectContainer = styled.div<{ animate: boolean }>`
   font-family: 'Goldman';
   display: grid;
   grid-template-columns: 1fr;
-  position: relative;
-  top: 10%;
 
-  :nth-child(even) {
+  :nth-child(odd) {
     right: ${(props) => (props.animate ? '0' : '-2000px')};
     ${ImgWrapper} {
       grid-column: 1;
@@ -20,7 +18,7 @@ const ProjectContainer = styled.div<{ animate: boolean }>`
       grid-column: 1;
     }
   }
-  :nth-child(odd) {
+  :nth-child(even) {
     left: ${(props) => (props.animate ? '0' : '-2000px')};
     ${ImgWrapper} {
       grid-column: 1;
@@ -32,7 +30,7 @@ const ProjectContainer = styled.div<{ animate: boolean }>`
   @media only screen and (min-width: 1024px) {
     gap: 50px;
     grid-template-columns: 1fr 1fr;
-    :nth-child(even) {
+    :nth-child(odd) {
       ${ImgWrapper} {
         grid-column: 1;
       }
@@ -40,7 +38,7 @@ const ProjectContainer = styled.div<{ animate: boolean }>`
         grid-column: 2;
       }
     }
-    :nth-child(odd) {
+    :nth-child(even) {
       ${ImgWrapper} {
         grid-column: 2;
       }
