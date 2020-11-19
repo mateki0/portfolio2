@@ -3,7 +3,7 @@ import SingleProject from '../SingleProject';
 import ProjectsWrapper from './styled/ProjectsWrapper';
 import { useStaticQuery, graphql } from 'gatsby';
 
-const Projects = () => {
+const Projects = ({ forwardRef }) => {
   const allFile = useStaticQuery(graphql`
     query MyQuery {
       allMarkdownRemark {
@@ -92,7 +92,7 @@ const Projects = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   return (
-    <ProjectsWrapper>
+    <ProjectsWrapper ref={forwardRef}>
       {allFile.allMarkdownRemark.edges.map((image, id) => (
         <SingleProject
           animate={show[`project${id}`]}

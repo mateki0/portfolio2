@@ -41,7 +41,7 @@ const Heading = styled.h1<{ isVisible: boolean }>`
   left: 0;
   right: 0;
   text-align: center;
-  top: 15vh;
+  top: 50px;
   animation: ${(props) =>
     props.isVisible
       ? css`
@@ -49,6 +49,7 @@ const Heading = styled.h1<{ isVisible: boolean }>`
         `
       : 'initial'};
   animation-fill-mode: forwards;
+
   @media only screen and (min-width: 1024px) {
     font-size: 62px;
   }

@@ -1,13 +1,14 @@
 import styled, { css } from 'styled-components';
-import BouncedWord from './BouncedWord';
+import { BouncedWord } from './BouncedWord';
 
 const DescriptionWrapper = styled.div<{ isVisible: boolean }>`
+  display: block;
   width: 80%;
   text-align: center;
   border: none;
   background: transparent;
   position: absolute;
-  top: 25vh;
+  top: 210px;
   transform: translate3d(0, -1200px, 0);
   animation: ${(props) =>
     props.isVisible

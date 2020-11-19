@@ -6,9 +6,13 @@ const AboutWrapper = styled.section`
   justify-content: space-around;
   align-items: center;
   position: relative;
-  height: 80vh;
+  height: 100vh;
   min-height: 650px;
   background: #444ef9;
   border-bottom: 2px solid #fe4902;
+
+  @media only screen and (min-width: 1024px) {
+    height: 80vh;
+  }
 `;
 export default AboutWrapper;

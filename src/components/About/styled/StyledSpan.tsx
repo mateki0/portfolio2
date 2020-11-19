@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const StyledSpan = styled.span`
   font-size: 18px;
-  line-height: 1.4;
+  line-height: 1.5;
 
   color: #fff;
   font-family: 'Goldman', sans-serif;

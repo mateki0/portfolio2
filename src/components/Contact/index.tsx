@@ -19,7 +19,7 @@ const encode = (data) => {
     .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&');
 };
-const Contact = () => {
+const Contact = ({ forwardRef }) => {
   const { register, handleSubmit, errors } = useForm<Inputs>();
   const [state, setState] = React.useState({});
   const handleChange = (e: { target: { name: string; value: string } }) =>
@@ -41,7 +41,7 @@ const Contact = () => {
       .catch((error) => console.log(error));
   };
   return (
-    <ContactWrapper>
+    <ContactWrapper ref={forwardRef}>
       <Form
         onSubmit={handleSubmit(onSubmit)}
         method="POST"

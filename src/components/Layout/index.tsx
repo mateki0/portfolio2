@@ -1,15 +1,15 @@
 import * as React from 'react';
 import { createGlobalStyle } from 'styled-components';
-import { useStaticQuery, graphql } from 'gatsby';
 import StyledMain from './StyledMain';
-import StyledBackground from './StyledBackground';
 
 interface LayoutProps {
   children: React.ReactNode;
   siteTitle?: string;
 }
 const GlobalStyle = createGlobalStyle`
-
+  html{
+    scroll-behavior: smooth;
+  }
 body{
   
   box-sizing:border-box;
@@ -22,26 +22,10 @@ body{
 
 `;
 const Layout: React.FC<LayoutProps> = ({ children }) => {
-  const hero = useStaticQuery(
-    graphql`
-      query {
-        file(relativePath: { eq: "bg3.jpg" }) {
-          childImageSharp {
-            fluid(quality: 100, maxWidth: 1920) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    `
-  );
   return (
     <>
       <GlobalStyle />
-      <StyledMain>
-        {children}
-        {/* <StyledBackground fluid={hero.file.childImageSharp.fluid}></StyledBackground> */}
-      </StyledMain>
+      <StyledMain>{children}</StyledMain>
     </>
   );
 };

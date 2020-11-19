@@ -9,7 +9,8 @@ import StyledSpan from './styled/StyledSpan';
 import Github from '../../assets/github.svg';
 import Linkedin from '../../assets/linkedin.svg';
 import IconsWrapper from './styled/IconsWrapper';
-const About = () => {
+import ChevronsWrapper from './styled/ChevronsWrapper';
+const About = ({ forwardRef }) => {
   const [isVisible, setIsVisible] = React.useState(false);
 
   const toggleDescription = () => {
@@ -23,7 +24,7 @@ const About = () => {
   };
 
   return (
-    <AboutWrapper>
+    <AboutWrapper ref={forwardRef}>
       <Typing speed={70} onFinishedTyping={toggleDescription}>
         <Heading isVisible={isVisible}>Cześć, jestem Mateusz</Heading>
       </Typing>
@@ -43,11 +44,13 @@ const About = () => {
           </a>
         </IconsWrapper>
       </DescriptionWrapper>
-      <ChevronDown isVisible={isVisible} onClick={handleScrollClick}>
-        <Chevron />
-        <Chevron />
-        <Chevron />
-      </ChevronDown>
+      <ChevronsWrapper>
+        <ChevronDown isVisible={isVisible} onClick={handleScrollClick}>
+          <Chevron />
+          <Chevron />
+          <Chevron />
+        </ChevronDown>
+      </ChevronsWrapper>
     </AboutWrapper>
   );
 };

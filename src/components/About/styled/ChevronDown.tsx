@@ -14,14 +14,11 @@ const First = keyframes`
     }
 `;
 const ChevronDown = styled.div<{ isVisible: boolean }>`
-  display: none;
-  visibility: hidden;
-
   transition: all 3s;
   width: 50px;
   height: 50px;
   position: absolute;
-  top: 80%;
+
   &:hover {
     cursor: pointer;
   }
@@ -49,11 +46,6 @@ const ChevronDown = styled.div<{ isVisible: boolean }>`
 
       animation: ${First} 1.5s linear infinite;
     }
-  }
-  @media only screen and (min-width: 1024px) {
-    display: initial;
-    visibility: visible;
-    opacity: ${(props) => (props.isVisible ? '1' : '0')};
   }
 `;
 
