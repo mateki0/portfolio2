@@ -6,6 +6,18 @@ const Technology = styled.li`
   color: #fff;
   font-size: 16px;
   margin-top: 10px;
+
+  svg {
+    width: 32px;
+    height: 32px;
+    fill: #fff;
+
+    transition: all 0.3s;
+    &:hover {
+      cursor: pointer;
+      fill: #000;
+    }
+  }
   @media only screen and (min-width: 1024px) {
     font-size: 20px;
   }

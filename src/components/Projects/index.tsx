@@ -16,6 +16,7 @@ const Projects = ({ forwardRef }) => {
               image
               description
               technologies
+              github
             }
           }
         }
@@ -103,6 +104,7 @@ const Projects = ({ forwardRef }) => {
           imgHref={image.node.frontmatter.imgHref}
           description={image.node.frontmatter.description}
           technologies={image.node.frontmatter.technologies}
+          github={image.node.frontmatter.github}
         />
       ))}
     </ProjectsWrapper>

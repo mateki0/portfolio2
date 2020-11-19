@@ -8,6 +8,7 @@ import ImgWrapper from './styled/ImgWrapper';
 import TechnoligesList from './styled/TechnologiesList';
 import Technology from './styled/Technology';
 import AppDescription from './styled/AppDescription';
+import Github from '../../assets/github.svg';
 interface ProjectProps {
   imageSrc: string;
   name: string;
@@ -16,6 +17,7 @@ interface ProjectProps {
   animate: boolean;
   description: string;
   technologies: string;
+  github: string;
 }
 
 const SingleProject = ({
@@ -26,6 +28,7 @@ const SingleProject = ({
   animate,
   description,
   technologies,
+  github,
 }: ProjectProps) => {
   const descriptionArray = technologies.split(' ');
   return (
@@ -40,6 +43,11 @@ const SingleProject = ({
           {descriptionArray.map((item) => (
             <Technology key={item}>{item.replace('-', ' ')}</Technology>
           ))}
+          <Technology>
+            <a target="_blank" href={github}>
+              <Github />
+            </a>
+          </Technology>
         </TechnoligesList>
         <StyledLink href={imgHref} target="_blank">
           Zobacz
