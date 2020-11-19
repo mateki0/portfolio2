@@ -38,7 +38,7 @@ const SingleProject = ({
         <AppDescription>{description}</AppDescription>
         <TechnoligesList>
           {descriptionArray.map((item) => (
-            <Technology>{item.replace('-', ' ')}</Technology>
+            <Technology key={item}>{item.replace('-', ' ')}</Technology>
           ))}
         </TechnoligesList>
         <StyledLink href={imgHref} target="_blank">

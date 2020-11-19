@@ -36,13 +36,20 @@ const Contact = () => {
       }),
     })
       .then(() => {
-        window.location.href = '/dziekujemy';
+        window.location.href = '/';
       })
       .catch((error) => console.log(error));
   };
   return (
     <ContactWrapper>
-      <Form onSubmit={handleSubmit(onSubmit)} method="POST" name="contact" data-netlify="true">
+      <Form
+        onSubmit={handleSubmit(onSubmit)}
+        method="POST"
+        name="contact"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        action="/"
+      >
         <input type="hidden" name="form-name" value="contact" />
         <InputWrapper>
           <div>

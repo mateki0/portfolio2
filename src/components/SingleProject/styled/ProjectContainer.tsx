@@ -9,7 +9,7 @@ const ProjectContainer = styled.div<{ animate: boolean }>`
   display: grid;
   grid-template-columns: 1fr;
   position: relative;
-  top: 25%;
+  top: 10%;
 
   :nth-child(even) {
     right: ${(props) => (props.animate ? '0' : '-2000px')};

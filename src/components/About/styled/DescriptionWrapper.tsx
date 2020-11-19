@@ -3,7 +3,6 @@ import BouncedWord from './BouncedWord';
 
 const DescriptionWrapper = styled.div<{ isVisible: boolean }>`
   width: 80%;
-  height: 100%;
   text-align: center;
   border: none;
   background: transparent;

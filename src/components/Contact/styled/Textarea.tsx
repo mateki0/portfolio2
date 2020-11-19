@@ -8,7 +8,12 @@ const Textarea = styled.textarea`
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.3);
   border: none;
-  font-size: 18px;
+  font-size: 16px;
   resize: none;
+
+  @media only screen and (min-width: 1024px) {
+    height: 100px;
+    font-size: 18px;
+  }
 `;
 export default Textarea;

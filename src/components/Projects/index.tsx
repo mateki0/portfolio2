@@ -59,7 +59,7 @@ const Projects = () => {
   });
   React.useLayoutEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY >= refArray[0].ref.current.getBoundingClientRect().top) {
+      if (window.scrollY >= refArray[0].ref.current.getBoundingClientRect().top - 600) {
         doShow((state) => ({ ...state, project0: true }));
       }
       if (

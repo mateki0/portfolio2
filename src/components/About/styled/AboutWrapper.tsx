@@ -7,6 +7,7 @@ const AboutWrapper = styled.section`
   align-items: center;
   position: relative;
   height: 80vh;
+  min-height: 650px;
   background: #444ef9;
   border-bottom: 2px solid #fe4902;
 `;

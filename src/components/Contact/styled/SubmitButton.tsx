@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 const SubmitButton = styled.button`
   padding: 15px 30px;
-  width: 40%;
+  width: 55%;
   border: none;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   color: #fff;
   font-family: 'Goldman';
@@ -16,6 +16,13 @@ const SubmitButton = styled.button`
   &:hover {
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.6);
+  }
+  @media only screen and (min-width: 1024px) {
+    width: 50%;
+    font-size: 18px;
+  }
+  @media only screen and (min-width: 1280px) {
+    width: 50%;
   }
 `;
 export default SubmitButton;

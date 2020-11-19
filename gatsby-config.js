@@ -47,7 +47,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-netlify`,
-    `gatsby-plugin-react-helmet`,
+    `@rhysforyou/gatsby-plugin-react-helmet-async`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
@@ -81,7 +81,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `./static/favicon.ico`,
+        icon: `./static/favicon.png`,
       },
     },
     {

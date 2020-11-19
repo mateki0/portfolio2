@@ -6,7 +6,9 @@ import DescriptionWrapper from './styled/DescriptionWrapper';
 import ChevronDown from './styled/ChevronDown';
 import Chevron from './styled/Chevron';
 import StyledSpan from './styled/StyledSpan';
-
+import Github from '../../assets/github.svg';
+import Linkedin from '../../assets/linkedin.svg';
+import IconsWrapper from './styled/IconsWrapper';
 const About = () => {
   const [isVisible, setIsVisible] = React.useState(false);
 
@@ -19,6 +21,7 @@ const About = () => {
       behavior: 'smooth',
     });
   };
+
   return (
     <AboutWrapper>
       <Typing speed={70} onFinishedTyping={toggleDescription}>
@@ -31,6 +34,14 @@ const About = () => {
           projekt komercyjny (ModernSimple). Chciałbym pokazać Ci kilka moich projektów, oraz
           zachęcić do kontaktu.
         </StyledSpan>
+        <IconsWrapper>
+          <a href="https://github.com/mateki0" target="_blank">
+            <Github />
+          </a>
+          <a href="https://linkedin.com/in/mateusz-bętka" target="_blank">
+            <Linkedin />
+          </a>
+        </IconsWrapper>
       </DescriptionWrapper>
       <ChevronDown isVisible={isVisible} onClick={handleScrollClick}>
         <Chevron />
