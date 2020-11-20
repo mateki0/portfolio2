@@ -3,6 +3,6 @@ import styled from 'styled-components';
 const Menu = styled.nav`
   display: flex;
   justify-content: center;
-  height: 60px;
+  height: 70px;
 `;
 export default Menu;

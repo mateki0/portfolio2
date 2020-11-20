@@ -5,8 +5,8 @@ const AboutWrapper = styled.section`
   flex-direction: column;
   height: 100%;
   padding-bottom: 50px;
+  padding-top: 70px;
   background: #16224f;
   border-bottom: 2px solid rgb(24, 236, 141);
-  margin-top: 60px;
 `;
 export default AboutWrapper;
