@@ -21,8 +21,8 @@ function SEO({ description, meta, title, image }) {
 
   const metaDescription = description || site.siteMetadata.description;
   const defaultTitle = site.siteMetadata?.title;
-  const defaultImage = site.metadata.defaultImage;
-  const siteUrl = site.metadata.siteUrl;
+  const defaultImage = site.siteMetadata?.defaultImage;
+  const siteUrl = site.siteMetadata?.siteUrl;
   return (
     <Helmet
       htmlAttributes={{
