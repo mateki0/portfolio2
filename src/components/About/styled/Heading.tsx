@@ -25,7 +25,7 @@ const ExplodeTitle = keyframes`
             transform-origin: 0 bottom 0;
   }
 `;
-const Heading = styled.h1<{ isVisible: boolean }>`
+const Heading = styled.h2<{ isVisible: boolean }>`
   font-size: 32px;
   font-family: 'Goldman', cursive;
   font-weight: 700;
