@@ -7,9 +7,7 @@ interface LayoutProps {
   siteTitle?: string;
 }
 const GlobalStyle = createGlobalStyle`
-  html{
-    scroll-behavior: smooth;
-  }
+
 body{
   background-color:rgb(28, 49, 69);
   box-sizing:border-box;

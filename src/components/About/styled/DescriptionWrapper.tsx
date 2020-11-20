@@ -1,22 +1,17 @@
-import styled, { css } from 'styled-components';
-import { BouncedWord } from './BouncedWord';
+import styled from 'styled-components';
 
 const DescriptionWrapper = styled.div<{ isVisible: boolean }>`
   display: block;
   width: 80%;
-  text-align: center;
+
   border: none;
   background: transparent;
-  position: absolute;
-  top: 210px;
-  transform: translate3d(0, -1200px, 0);
-  animation: ${(props) =>
-    props.isVisible
-      ? css`
-          2s ${BouncedWord} 1
-        `
-      : 'initial'};
-  animation-fill-mode: forwards;
+  transition: all 3s;
+  opacity: ${(props) => (props.isVisible ? '1' : '0')};
+  @media only screen and (min-width: 1280px) {
+    grid-row: 2;
+    grid-column: 2;
+  }
 `;
 
 export default DescriptionWrapper;

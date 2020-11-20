@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const IconsWrapper = styled.div`
   display: flex;
   width: 40%;
-  margin: 20px auto 0 auto;
+  margin: 30px auto 0 auto;
   justify-content: space-between;
 
   svg {

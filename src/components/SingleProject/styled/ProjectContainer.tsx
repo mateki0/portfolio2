@@ -8,7 +8,7 @@ const ProjectContainer = styled.div<{ animate: boolean }>`
   font-family: 'Goldman';
   display: grid;
   grid-template-columns: 1fr;
-
+  position: relative;
   :nth-child(odd) {
     right: ${(props) => (props.animate ? '0' : '-2000px')};
     ${ImgWrapper} {

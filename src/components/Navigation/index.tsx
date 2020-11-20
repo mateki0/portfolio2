@@ -4,15 +4,15 @@ import StyledHeader from './styled/StyledHeader';
 import NavList from './styled/NavList';
 import NavButton from './styled/NavButton';
 
-const Navigation = ({ aboutRef, projectsRef, contactRef }) => {
+const Navigation = ({ projectsRef, contactRef }) => {
   const handleScrollToAbout = () => {
-    aboutRef.current.scrollIntoView();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
   const handleScrollToProjects = () => {
-    projectsRef.current.scrollIntoView();
+    projectsRef.current.scrollIntoView({ behavior: 'smooth' });
   };
   const handleScrollToContact = () => {
-    contactRef.current.scrollIntoView();
+    contactRef.current.scrollIntoView({ behavior: 'smooth' });
   };
   return (
     <StyledHeader>

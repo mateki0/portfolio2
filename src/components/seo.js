@@ -27,7 +27,7 @@ function SEO({ description, meta, title }) {
         lang: 'pl-PL',
       }}
       title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      titleTemplate={defaultTitle}
       meta={[
         {
           name: `description`,
@@ -36,6 +36,10 @@ function SEO({ description, meta, title }) {
         {
           property: `og:title`,
           content: defaultTitle + '|' + title,
+        },
+        {
+          property: `og:image`,
+          content: 'https://mbetka.pl/ogImage.png',
         },
         {
           property: `og:description`,

@@ -9,6 +9,7 @@ import TechnoligesList from './styled/TechnologiesList';
 import Technology from './styled/Technology';
 import AppDescription from './styled/AppDescription';
 import Github from '../../assets/github.svg';
+import Cooperation from './styled/Cooperation';
 interface ProjectProps {
   imageSrc: string;
   name: string;
@@ -40,13 +41,18 @@ const SingleProject = ({
         <AppName>{name}</AppName>
         <AppDescription>{description}</AppDescription>
         <TechnoligesList>
+          {name === 'Carsify' ? <Cooperation>* Współpraca</Cooperation> : ''}
           {descriptionArray.map((item) => (
             <Technology key={item}>{item.replace('-', ' ')}</Technology>
           ))}
           <Technology>
-            <a target="_blank" href={github}>
-              <Github />
-            </a>
+            {github === 'private' ? (
+              <span>Prywatne repozytorium</span>
+            ) : (
+              <a target="_blank" href={github}>
+                <Github />
+              </a>
+            )}
           </Technology>
         </TechnoligesList>
         <StyledLink href={imgHref} target="_blank">

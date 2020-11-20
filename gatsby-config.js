@@ -1,6 +1,6 @@
 const {
   NODE_ENV,
-  URL: NETLIFY_SITE_URL = 'https://www.modernsimple.pl',
+  URL: NETLIFY_SITE_URL = 'https://www.mbetka.pl',
   DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
   CONTEXT: NETLIFY_ENV = NODE_ENV,
 } = process.env;
@@ -9,7 +9,7 @@ const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
 module.exports = {
   siteMetadata: {
     title: `Mateusz Bętka Portfolio`,
-    description: `Mateusz Bętka FrontEnd Developer Portfolio`,
+    description: `Frontend Developer Mateusz Bętka Portfolio`,
     author: `Mateusz Bętka`,
     siteUrl: siteUrl,
   },

@@ -14,11 +14,17 @@ const First = keyframes`
     }
 `;
 const ChevronDown = styled.div<{ isVisible: boolean }>`
+  display: none;
+  visibility: hidden;
   transition: all 3s;
   width: 50px;
   height: 50px;
   position: absolute;
-
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  opacity: ${(props) => (props.isVisible ? '1' : '0')};
   &:hover {
     cursor: pointer;
   }
@@ -32,7 +38,6 @@ const ChevronDown = styled.div<{ isVisible: boolean }>`
       background-color: rgb(24, 236, 141);
       transform: rotate(-45deg);
       left: 4px;
-
       animation: ${First} 1.5s linear infinite;
     }
     ::after {
@@ -43,9 +48,12 @@ const ChevronDown = styled.div<{ isVisible: boolean }>`
       position: absolute;
       background-color: rgb(24, 236, 141);
       transform: rotate(45deg);
-
       animation: ${First} 1.5s linear infinite;
     }
+  }
+  @media only screen and (min-width: 768px) {
+    display: initial;
+    visibility: visible;
   }
 `;
 
