@@ -12,6 +12,7 @@ module.exports = {
     description: `Frontend Developer Mateusz Bętka Portfolio`,
     author: `Mateusz Bętka`,
     siteUrl: siteUrl,
+    image: './ogImage.png',
   },
 
   plugins: [

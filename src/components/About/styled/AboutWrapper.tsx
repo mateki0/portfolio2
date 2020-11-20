@@ -3,7 +3,6 @@ import styled from 'styled-components';
 const AboutWrapper = styled.section`
   display: flex;
   flex-direction: column;
-  align-items: center;
   height: 100vh;
   background: #16224f;
   border-bottom: 2px solid rgb(24, 236, 141);

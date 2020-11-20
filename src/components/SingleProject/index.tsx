@@ -35,13 +35,13 @@ const SingleProject = ({
   return (
     <ProjectContainer ref={forwardRef} animate={animate}>
       <ImgWrapper>
-        <GatsbyImage filename={imageSrc} />
+        <GatsbyImage filename={imageSrc} alt={name} />
       </ImgWrapper>
       <ProjectDescription>
         <AppName>{name}</AppName>
         <AppDescription>{description}</AppDescription>
         <TechnoligesList>
-          {name === 'Carsify' ? <Cooperation>* Współpraca</Cooperation> : ''}
+          {name === 'Carsify' ? <Technology>* Współpraca</Technology> : ''}
           {descriptionArray.map((item) => (
             <Technology key={item}>{item.replace('-', ' ')}</Technology>
           ))}

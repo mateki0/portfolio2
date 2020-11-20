@@ -2,7 +2,7 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
-const GatsbyImage = ({ filename }: { filename: string }) => {
+const GatsbyImage = ({ filename, alt }: { filename: string; alt: string }) => {
   const { allFile } = useStaticQuery(graphql`
     query {
       allFile(filter: { sourceInstanceName: { eq: "projects" } }) {
@@ -29,7 +29,7 @@ const GatsbyImage = ({ filename }: { filename: string }) => {
   if (!image) {
     return null;
   }
-  return <Img fluid={image.node.childImageSharp.fluid} />;
+  return <Img fluid={image.node.childImageSharp.fluid} alt={alt} />;
 };
 
 export default GatsbyImage;
