@@ -13,9 +13,7 @@ const First = keyframes`
       opacity:1;
     }
 `;
-const ChevronDown = styled.div<{ isVisible: boolean }>`
-  display: none;
-  visibility: hidden;
+const ChevronDown = styled.div`
   transition: all 3s;
   width: 50px;
   height: 50px;
@@ -24,7 +22,7 @@ const ChevronDown = styled.div<{ isVisible: boolean }>`
   margin-right: auto;
   left: 0;
   right: 0;
-  opacity: ${(props) => (props.isVisible ? '1' : '0')};
+
   &:hover {
     cursor: pointer;
   }
@@ -50,10 +48,6 @@ const ChevronDown = styled.div<{ isVisible: boolean }>`
       transform: rotate(45deg);
       animation: ${First} 1.5s linear infinite;
     }
-  }
-  @media only screen and (min-width: 768px) {
-    display: initial;
-    visibility: visible;
   }
 `;
 

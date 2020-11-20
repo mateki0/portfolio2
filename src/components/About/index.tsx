@@ -48,13 +48,13 @@ const About = () => {
           </IconsWrapper>
         </DescriptionWrapper>
       </NameDescWrapper>
-      <div>
-        <ChevronDown isVisible={isVisible} onClick={handleScrollClick}>
+      <ChevronsWrapper isVisible={isVisible}>
+        <ChevronDown onClick={handleScrollClick}>
           <Chevron />
           <Chevron />
           <Chevron />
         </ChevronDown>
-      </div>
+      </ChevronsWrapper>
     </AboutWrapper>
   );
 };
