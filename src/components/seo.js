@@ -21,7 +21,8 @@ function SEO({ description, meta, title, image }) {
 
   const metaDescription = description || site.siteMetadata.description;
   const defaultTitle = site.siteMetadata?.title;
-
+  const defaultImage = site.metadata.defaultImage;
+  const siteUrl = site.metadata.siteUrl;
   return (
     <Helmet
       htmlAttributes={{
@@ -40,7 +41,7 @@ function SEO({ description, meta, title, image }) {
         },
         {
           property: `og:image`,
-          content: 'https://mbetka.pl/ogImage.png',
+          content: `${siteUrl}${image || defaultImage}`,
         },
         {
           property: `og:description`,

@@ -10,6 +10,7 @@ import Technology from './styled/Technology';
 import AppDescription from './styled/AppDescription';
 import Github from '../../assets/github.svg';
 import Cooperation from './styled/Cooperation';
+import PrivateGithub from './styled/PrivateGithub';
 interface ProjectProps {
   imageSrc: string;
   name: string;
@@ -41,13 +42,22 @@ const SingleProject = ({
         <AppName>{name}</AppName>
         <AppDescription>{description}</AppDescription>
         <TechnoligesList>
-          {name === 'Carsify' ? <Technology>* Współpraca</Technology> : ''}
+          {name === 'Carsify' ? (
+            <Technology>
+              <h3>* Współpraca</h3>
+            </Technology>
+          ) : (
+            ''
+          )}
           {descriptionArray.map((item) => (
             <Technology key={item}>{item.replace('-', ' ')}</Technology>
           ))}
           <Technology>
             {github === 'private' ? (
-              <span>Prywatne repozytorium</span>
+              <PrivateGithub>
+                <Github />
+                <span>Prywatne repozytorium</span>
+              </PrivateGithub>
             ) : (
               <a target="_blank" href={github}>
                 <Github />
