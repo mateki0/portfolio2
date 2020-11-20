@@ -48,7 +48,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-netlify`,
-    `@rhysforyou/gatsby-plugin-react-helmet-async`,
+    `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
