@@ -23,11 +23,12 @@ const encode = (data) => {
 const Contact = ({ forwardRef }) => {
   const { register, handleSubmit, errors } = useForm<Inputs>();
   const [state, setState] = React.useState({});
-  const handleChange = (e: { target: { name: string; value: string } }) =>
-    setState({ ...state, [e.target.name]: e.target.value });
+  const handleChange = (e: { target: { name: string; value: string } }) => {
+    console.log(state);
 
-  const onSubmit = (e: { preventDefault: () => void }) => {
-    e.preventDefault();
+    setState({ ...state, [e.target.name]: e.target.value });
+  };
+  const onSubmit = () => {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -41,6 +42,7 @@ const Contact = ({ forwardRef }) => {
       })
       .catch((error) => console.log(error));
   };
+
   return (
     <ContactWrapper ref={forwardRef}>
       <SectionName>Kontakt</SectionName>
@@ -52,7 +54,6 @@ const Contact = ({ forwardRef }) => {
         data-netlify-honeypot="bot-field"
         action="/"
       >
-        <input type="hidden" name="form-name" value="contact" />
         <InputWrapper>
           <div>
             <Label htmlFor="name">Imię</Label>
@@ -97,6 +98,7 @@ const Contact = ({ forwardRef }) => {
             onChange={handleChange}
           />
         </InputWrapper>
+        <input type="hidden" name="form-name" value="contact" />
         <SubmitButton>Wyślij</SubmitButton>
       </Form>
     </ContactWrapper>
