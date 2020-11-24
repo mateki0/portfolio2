@@ -1,31 +1,6 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
-const ExplodeTitle = keyframes`
-  10% {
-            transform: scaleY(0.2);
-            transform-origin: 0 bottom 0;
-  }
-  20% {
-
-            transform: scaleY(1.3);
-            transform-origin: 0 bottom 0;
-  }
-  30% {
-
-            transform: scaleY(0.7);
-            transform-origin: 0 bottom 0;
-  }
-  40% {
-
-            transform: scaleY(1);
-            transform-origin: 0 bottom 0;
-  }
-  100% {
-            transform: scaleY(1);
-            transform-origin: 0 bottom 0;
-  }
-`;
-const Heading = styled.h2<{ isVisible: boolean }>`
+const Heading = styled.h2`
   font-size: 32px;
   font-family: 'Goldman', cursive;
   font-weight: 700;

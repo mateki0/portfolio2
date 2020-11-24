@@ -36,7 +36,7 @@ const Contact = ({ forwardRef }) => {
       }),
     })
       .then(() => {
-        window.location.href = '/';
+        window.location.href = '/dziekuje';
       })
       .catch((error) => console.log(error));
   };

@@ -29,7 +29,7 @@ const About = () => {
     <AboutWrapper>
       <NameDescWrapper>
         <Typing speed={70} onFinishedTyping={toggleDescription}>
-          <Heading isVisible={isVisible}>Cześć, jestem Mateusz</Heading>
+          <Heading>Cześć, jestem Mateusz</Heading>
         </Typing>
         <DescriptionWrapper isVisible={isVisible}>
           <StyledSpan ref={text}>
