@@ -24,8 +24,6 @@ const Contact = ({ forwardRef }) => {
   const { register, handleSubmit, errors } = useForm<Inputs>();
   const [state, setState] = React.useState({});
   const handleChange = (e: { target: { name: string; value: string } }) => {
-    console.log(state);
-
     setState({ ...state, [e.target.name]: e.target.value });
   };
   const onSubmit = () => {
@@ -52,7 +50,6 @@ const Contact = ({ forwardRef }) => {
         name="contact"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
-        action="/"
       >
         <InputWrapper>
           <div>
