@@ -59,13 +59,13 @@ const SingleProject = ({
                 <span>Prywatne repozytorium</span>
               </PrivateGithub>
             ) : (
-              <a target="_blank" href={github}>
+              <a target="_blank" href={github} rel="noopener noreferrer">
                 <Github />
               </a>
             )}
           </Technology>
         </TechnoligesList>
-        <StyledLink href={imgHref} target="_blank">
+        <StyledLink href={imgHref} target="_blank" rel="noopener noreferrer">
           Zobacz
         </StyledLink>
       </ProjectDescription>

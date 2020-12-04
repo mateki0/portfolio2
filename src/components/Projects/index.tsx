@@ -43,6 +43,10 @@ const Projects = ({ forwardRef }) => {
       ref: React.useRef<HTMLDivElement>(null),
     },
     {
+      name: 'bet',
+      ref: React.useRef<HTMLDivElement>(null),
+    },
+    {
       name: 'hacker',
       ref: React.useRef<HTMLDivElement>(null),
     },
@@ -63,6 +67,7 @@ const Projects = ({ forwardRef }) => {
     project3: false,
     project4: false,
     project5: false,
+    project6: false,
   });
   React.useLayoutEffect(() => {
     const handleScroll = () => {
@@ -98,6 +103,12 @@ const Projects = ({ forwardRef }) => {
         refArray[4].ref.current.getBoundingClientRect().top + window.pageYOffset
       ) {
         doShow((state) => ({ ...state, project5: true }));
+      }
+      if (
+        window.scrollY >=
+        refArray[5].ref.current.getBoundingClientRect().top + window.pageYOffset
+      ) {
+        doShow((state) => ({ ...state, project6: true }));
       }
     };
     window.addEventListener('scroll', handleScroll);
