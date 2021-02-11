@@ -39,10 +39,14 @@ const About = () => {
             zachęcić do kontaktu.
           </StyledSpan>
           <IconsWrapper>
-            <a href="https://github.com/mateki0" target="_blank">
+            <a href="https://github.com/mateki0" target="_blank" rel="noopener noreferrer">
               <Github />
             </a>
-            <a href="https://linkedin.com/in/mateusz-bętka" target="_blank">
+            <a
+              href="https://linkedin.com/in/mateusz-bętka"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Linkedin />
             </a>
           </IconsWrapper>
