@@ -9,8 +9,8 @@ import TechnoligesList from './styled/TechnologiesList';
 import Technology from './styled/Technology';
 import AppDescription from './styled/AppDescription';
 import Github from '../../assets/github.svg';
-import Cooperation from './styled/Cooperation';
 import PrivateGithub from './styled/PrivateGithub';
+
 interface ProjectProps {
   imageSrc: string;
   name: string;
@@ -65,9 +65,11 @@ const SingleProject = ({
             )}
           </Technology>
         </TechnoligesList>
-        <StyledLink href={imgHref} target="_blank" rel="noopener noreferrer">
-          Zobacz
-        </StyledLink>
+        {imgHref !== 'mobile' && (
+          <StyledLink href={imgHref} target="_blank" rel="noopener noreferrer">
+            Zobacz
+          </StyledLink>
+        )}
       </ProjectDescription>
     </ProjectContainer>
   );

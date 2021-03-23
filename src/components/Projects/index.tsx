@@ -58,6 +58,14 @@ const Projects = ({ forwardRef }) => {
       name: 'pokebase',
       ref: React.useRef<HTMLDivElement>(null),
     },
+    {
+      name: 'rnchat',
+      ref: React.useRef<HTMLDivElement>(null),
+    },
+    {
+      name: 'rncarsharing',
+      ref: React.useRef<HTMLDivElement>(null),
+    },
   ];
 
   const [show, doShow] = React.useState({
@@ -68,6 +76,8 @@ const Projects = ({ forwardRef }) => {
     project4: false,
     project5: false,
     project6: false,
+    project7: false,
+    project8: false,
   });
   React.useLayoutEffect(() => {
     const handleScroll = () => {
@@ -109,6 +119,18 @@ const Projects = ({ forwardRef }) => {
         refArray[5].ref.current.getBoundingClientRect().top + window.pageYOffset
       ) {
         doShow((state) => ({ ...state, project6: true }));
+      }
+      if (
+        window.scrollY >=
+        refArray[6].ref.current.getBoundingClientRect().top + window.pageYOffset
+      ) {
+        doShow((state) => ({ ...state, project7: true }));
+      }
+      if (
+        window.scrollY >=
+        refArray[7].ref.current.getBoundingClientRect().top + window.pageYOffset
+      ) {
+        doShow((state) => ({ ...state, project8: true }));
       }
     };
     window.addEventListener('scroll', handleScroll);
